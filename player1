@@ -1,0 +1,9 @@
+-(IBAction)musiconButtonClicked:(id)sender{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"song1" ofType:@"mp3"];
+    audioPlayer = [[AVAudioPlayer alloc ] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    [audioPlayer play];
+}
+ 
+-(IBAction)musicoffButtonClicked:(id)sender{
+    [audioPlayer stop];
+}
